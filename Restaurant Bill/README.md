@@ -7,4 +7,6 @@ meal and the percentage of tax and tip.
 Calculation: percentage of tax / 100 = result 
              result * the cost of the meal
 I did the same calculation for tip.
+I used %.3 for tax and tip amounts becuase I think 3 percentages is enough. I rounded the amounts. 
 Caculating the total amount which shows on bill: cost of the meal + tax_amount + tax_tip.
+I rounded the total cost, %.2f.

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//main function
 int main (){
 	
 	int max = 10;
@@ -15,21 +15,22 @@ int main (){
 			printf("Enter a number between 1-3.\n");
 		}
 		if (choice == 1){
-			// Using the formula randomNo = (rand() % (upper - lower + 1)) + lower;
+			// Using the randomNumber = (rand() % (upper - lower + 1));
 			int randomNumber = rand() % (max + 1); 
 			int user_number;
 			do{
 				printf("\n Enter a number : ");
 				scanf("%d", &user_number);
-				
+				//users entered number is lower than random number
 				if (user_number < randomNumber){
 					printf("\n You are too low.");
 				}
-				
+				//users entered number is greater than random number
 				if (user_number > randomNumber){
 					printf("\n You are too high");
 				}
-				if (randomNumber == user_number){
+				//users entered number is equal than random number, so win the game
+        if (randomNumber == user_number){
 					printf(" Correct Answer! You won!.\n");
 					break;
 				}
@@ -37,23 +38,24 @@ int main (){
 			while(user_number != randomNumber || user_number != 'q');
 		}
 		if (choice == 2){
-			// Using the formula randomNo = (rand() % (upper - lower + 1)) + lower;
+			// Using randomNumber = (rand() % (upper - lower + 1));
 			int randomNumber = rand() % (max + 1);
 			int user_choice;
 			do{
 				printf("\nThe maximum value is %d", max);
         printf("\n Enter a number : ");
 				scanf("%d", &user_choice);
-				if (user_choice > max) {
+				////users entered number is greater than random number
+        if (user_choice > max) {
           printf("\nWrong number choose number less than %d", max);
         }
+        //users entered number is less than zer, negatie number
         if (user_choice < 0) {
           printf("Choose potive number!");
         }
 				if (user_choice < randomNumber){
 					printf("\n You are too low.");
-				}
-				
+				}				
 				if (user_choice > randomNumber){
 					printf("\n You are too high");
 				}
@@ -67,11 +69,9 @@ int main (){
 		}
 		
 	}while (choice != 3);
-	if (choice == 3){
-    printf("Thank you for playing!");
-  }
-	return 0;
+	//Choice three end game 
   if (choice == 3){
     printf("Thank you for playing!");
   }
+	return 0;
 }
